@@ -11,6 +11,7 @@ import salaryRouter from "./routes/salary.js"
 import settingRouter from "./routes/setting.js"
 import leaveRouter from "./routes/leave.js"
 import dashboardRouter from "./routes/dashboard.js"
+import attendanceRouter from "./routes/attendance.js"
 
 connectDB()
 const app = express();
@@ -24,6 +25,7 @@ app.use("/api/salary", salaryRouter)
 app.use("/api/leave", leaveRouter)
 app.use("/api/setting", settingRouter)
 app.use("/api/dashboard", dashboardRouter)
+app.use("/api/attendance", attendanceRouter)
 
 app.listen(process.env.PORT, () => {
     console.log(`server running at port ${process.env.PORT}`)
